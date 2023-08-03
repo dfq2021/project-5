@@ -2,6 +2,10 @@
 Impl Merkle Tree following RFC6962
 
 本次project详细细节请看project-5报告
+# 实验原理
+Merkle trees是区块链的基本组成部分，通过以二叉树的形式保存区块数据节点的hash值的形式，可以快速归纳和校验区块数据的存在性和完整性。
+如图所示，Merkle trees的叶子节点保存每个区块数据的hash值，而父节点保存其两个子节点的hash值之后的hash值，这样保证了区块数据难以被更改，保证了数据的完整性和安全性。
+![image](https://github.com/dfq2021/project-5/assets/129512207/980d1713-1619-4c73-98ce-8adfd68ee960)
 
 
 # 实验步骤
@@ -14,9 +18,15 @@ Impl Merkle Tree following RFC6962
 # 实验结果
 ![image](https://github.com/jlwdfq/project-5/assets/129512207/1dc6bf29-5c37-43a6-8b1e-8393723313d5)
 
+其中生成一个100k数据的merkle tree 用时0.4s，
+
+给出节点的存在性证据用时0.001s，
+
+验证的时间可以忽略不计，很小。
+
 # 实验环境
-Windows10 
-
-PYCHARM 2022
-
-CPU：11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+| 语言  | 系统      | 平台   | 处理器                     |
+|-------|-----------|--------|----------------------------|
+| Cpp   | Windows10 | pycharm| Intel(R) Core(TM)i7-11800H |
+# 小组分工
+戴方奇 202100460092 单人组完成project5
